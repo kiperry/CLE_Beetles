@@ -944,5 +944,31 @@ boxplot(fun.beta, ylab = "Distance to median")
 TukeyHSD(fun.beta, which = "group", conf.level = 0.95)
 
 
+png("Figures/Tax and Fun Compostion.png", width = 2400, height = 1300, pointsize = 30)
+
+par(mfrow=c(1,2))
+
+ordiplot(nmds.tax, disp = "sites", type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.5, 0.5))
+points(nmds.tax, dis = "sites", select = which(df3$Trmt_Code=="MP"), pch = 17, cex = 2, col = "seagreen4")
+points(nmds.tax, dis = "sites", select = which(df3$Trmt_Code=="OF"), pch = 18, cex = 2, col = "lightgoldenrod2")
+points(nmds.tax, dis = "sites", select = which(df3$Trmt_Code=="PP"), pch = 15, cex = 2, col = "pink1")
+points(nmds.tax, dis = "sites", select = which(df3$Trmt_Code=="VL"), pch = 16, cex = 2, col = "seagreen2")
+ordiellipse(nmds.tax, df3$Trmt_Code, draw = "lines", col = c("seagreen4", "lightgoldenrod2", "pink1", "seagreen2"), 
+            lwd = 4, kind = "sd", conf = 0.90, label = FALSE)
+legend("topleft", legend = c("Forest", "Old Field", "Pocket Prarie", "Vacant Lot"),
+       pch = c(17, 18, 15, 16), cex = 1.5, bty = "n", col = c("seagreen4", "lightgoldenrod2", "pink1", "seagreen2"))
+
+
+ordiplot(nmds.fun, disp = "sites", type = "n", xlim = c(-0.8, 0.8), ylim = c(-0.5, 0.5))
+points(nmds.fun, dis = "sites", select = which(df3$Trmt_Code=="MP"), pch = 17, cex = 2, col = "seagreen4")
+points(nmds.fun, dis = "sites", select = which(df3$Trmt_Code=="OF"), pch = 18, cex = 2, col = "lightgoldenrod2")
+points(nmds.fun, dis = "sites", select = which(df3$Trmt_Code=="PP"), pch = 15, cex = 2, col = "pink1")
+points(nmds.fun, dis = "sites", select = which(df3$Trmt_Code=="VL"), pch = 16, cex = 2, col = "seagreen2")
+ordiellipse(nmds.fun, df3$Trmt_Code, draw = "lines", col = c("seagreen4", "lightgoldenrod2", "pink1", "seagreen2"), 
+            lwd = 4, kind = "sd", conf = 0.90, label = FALSE)
+
+dev.off()
+
+
 # PLSCA - Landscape variables & traits
 
