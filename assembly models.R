@@ -813,7 +813,7 @@ stripchart(SES_bsor ~ trmt, data = SES, pch = 19, cex = 2, add = TRUE,
            vertical = TRUE, method = "jitter", jitter = 0.2)
 abline(h = 0.0, col = "black", lwd = 3, lty=2)
 
-boxplot(SES_fbsor ~ trmt, data = SES, col = c("seagreen4", "seagreen2", "lightgoldenrod2", "goldenrod2" ),
+boxplot(SES_fbsor ~ trmt, data = SES, col = c("seagreen4", "lightgoldenrod2", "pink1", "seagreen2"),
         ylim = c(-2.5,3.5), ylab = "Standardized Effect Sizes (SES)", xlab = "", cex.main = 2,
         main = "", cex.lab = 1.8, cex.axis = 1.8)
 stripchart(SES_fbsor ~ trmt, data = SES, pch = 19, cex = 2, add = TRUE,
@@ -834,7 +834,7 @@ stripchart(SES_disp_0 ~ trmt, data = SES, pch = 19, cex = 2, add = TRUE,
            vertical = TRUE, method = "jitter", jitter = 0.2)
 abline(h = 0.0, col = "black", lwd = 3, lty=2)
 
-boxplot(SES_disp_2 ~ trmt, data = SES, col = c("seagreen4", "seagreen2", "lightgoldenrod2", "goldenrod2" ),
+boxplot(SES_disp_2 ~ trmt, data = SES, col = c("seagreen4", "lightgoldenrod2", "pink1", "seagreen2"),
         ylim = c(-2.5,3.5), ylab = "Standardized Effect Sizes (SES)", xlab = "", cex.main = 2,
         main = "", cex.lab = 1.8, cex.axis = 1.8)
 stripchart(SES_disp_2 ~ trmt, data = SES, pch = 19, cex = 2, add = TRUE,
@@ -855,7 +855,7 @@ stripchart(SES_activity_0 ~ trmt, data = SES, pch = 19, cex = 2, add = TRUE,
            vertical = TRUE, method = "jitter", jitter = 0.2)
 abline(h = 0.0, col = "black", lwd = 3, lty=2)
 
-boxplot(SES_activity_2 ~ trmt, data = SES, col = c("seagreen4", "seagreen2", "lightgoldenrod2", "goldenrod2" ),
+boxplot(SES_activity_2 ~ trmt, data = SES, col = c("seagreen4", "lightgoldenrod2", "pink1", "seagreen2"),
         ylim = c(-2.5,3.5), ylab = "Standardized Effect Sizes (SES)", xlab = "", cex.main = 2,
         main = "", cex.lab = 1.8, cex.axis = 1.8)
 stripchart(SES_activity_2 ~ trmt, data = SES, pch = 19, cex = 2, add = TRUE,
@@ -969,6 +969,4 @@ ordiellipse(nmds.fun, df3$Trmt_Code, draw = "lines", col = c("seagreen4", "light
 
 dev.off()
 
-
-# PLSCA - Landscape variables & traits
 
